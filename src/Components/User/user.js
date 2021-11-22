@@ -27,7 +27,7 @@ class User extends Component
                 for(let index=0;index<users.length;index++){
                     if(users[index].id === id)
                     {
-                        console.log(users[index])
+                        // console.log(users[index])
                         this.setState({user : users[index]})
                         return;
                     }
@@ -36,7 +36,7 @@ class User extends Component
                 this.props.history.push('/Home')
             })
         .catch(error=>{
-            console.log("error");
+            // console.log("error");
             alert("User not found !");
             this.props.history.push('/Home')
         })
@@ -92,7 +92,7 @@ class User extends Component
     {
         return(
             <div id="user">
-                <img id="image" src={this.state.user.Image}/>
+                <img id="image" src={this.state.user.Image} alt="Not found"/>
                 <p id="name">{this.state.user.name}</p>
                 <div id="btn-section">
                     <button id="shortlisted" onClick={(user)=>this.shortlistedHandler(this.state.user)}>Shortlisted</button>

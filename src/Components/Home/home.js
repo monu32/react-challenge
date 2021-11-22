@@ -27,7 +27,7 @@ class Home extends Component
                 this.setState({permanentUsers:users})
             })
         .catch(error=>{
-            console.log("error")
+            // console.log("error")
         })
     }
 
@@ -35,12 +35,6 @@ class Home extends Component
         let searchterm = event.target.value;
         searchterm = searchterm.toLowerCase();
         let users = [...this.state.permanentUsers];
-
-        if(searchterm=="")
-        {
-            this.setState({users})
-            return;
-        }
 
         let filter=[];
         for(let i=0;i<users.length;i++){

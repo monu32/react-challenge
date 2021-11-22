@@ -5,7 +5,7 @@ import './usercontent.css'
 const Usercontent=(props)=>
 {
     const users = props.users;
-    console.log(users)
+    // console.log(users)
     const content=users.map(user=>(
         <div key={user.id} className="user-outer">
             <Link className="Link"
